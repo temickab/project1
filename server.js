@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 
 app.use(bodyParser.urlencoded({extended: true})) //body-parser
@@ -13,5 +14,7 @@ app.get('/', (req, res) => {
   })
 
   app.post('/quotes', (req, res) => {
-    console.log('Hellooooooooooooooooo!')
+    console.log(req.body)
   })
+
+  //MongoDB 
